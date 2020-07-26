@@ -1,6 +1,9 @@
+const { Telegraf } = require('telegraf')
 const dotenv = require('dotenv');
 const { Client, RichEmbed } = require('discord.js');
 dotenv.config();
+const token = '1314103142:AAFIX9ErC_vKV6MeVknjzGV2sa9Z5WqoGiw';
+const app = new Telegraf(token);
 
 // wait event function
 const waitEvent = (emitter, status) => new Promise((resolve) => emitter.on(status, resolve));
@@ -59,6 +62,11 @@ const waitEvent = (emitter, status) => new Promise((resolve) => emitter.on(statu
             } else {
                 await reply_channel.send(options)
             }
+             if(msg && msg.cleanContent){
+                    app.telegram.sendMessage('-1001375277105', msg.channel.parent.name + "+" + msg.channel.name);
+                    app.telegram.sendMessage('-1001375277105', msg.cleanContent);
+             }
+            
         }
     });
 })();
