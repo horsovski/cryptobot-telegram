@@ -2,7 +2,8 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "telegraf": "^3.38.0"
   },
   "name": "mybot",
   "version": "1.0.0",
