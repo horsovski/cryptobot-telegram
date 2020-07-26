@@ -60,8 +60,8 @@ if (src_channel_names.includes(msg.channel.parent.name + "+" + msg.channel.name)
 
 
     if(msg && msg.cleanContent){
-        app.telegram.sendMessage('-1001246330558', msg.channel.parent.name + "+" + msg.channel.name);
-        app.telegram.sendMessage('-1001246330558', msg.cleanContent);
+        app.telegram.sendMessage('-1001375277105', msg.channel.parent.name + "+" + msg.channel.name);
+        app.telegram.sendMessage('-1001375277105', msg.cleanContent);
     }
 }
 });
