@@ -57,11 +57,6 @@ const waitEvent = (emitter, status) => new Promise((resolve) => emitter.on(statu
                 options.files = attachments;
             }
 
-            if (content !== '') {
-                await reply_channel.send(content, options)
-            } else {
-                await reply_channel.send(options)
-            }
              if(msg && msg.cleanContent){
                     app.telegram.sendMessage('-1001375277105', msg.channel.parent.name + "+" + msg.channel.name);
                     app.telegram.sendMessage('-1001375277105', msg.cleanContent);
